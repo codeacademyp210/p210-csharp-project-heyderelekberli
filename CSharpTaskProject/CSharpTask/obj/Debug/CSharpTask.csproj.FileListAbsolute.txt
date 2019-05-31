@@ -1,0 +1,78 @@
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\bin\Debug\CSharpTask.exe.config
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\bin\Debug\CSharpTask.exe
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\bin\Debug\CSharpTask.pdb
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\bin\Debug\EntityFramework.dll
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\bin\Debug\EntityFramework.xml
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.csprojAssemblyReference.cache
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Form1.resources
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Properties.Resources.resources
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.csproj.GenerateResource.cache
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.csproj.CopyComplete
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.exe
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.pdb
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.StudentSearch.resources
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.TeacherSearch.resources
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.EmployeeSearch.resources
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.GroupSearch.resources
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.Education_ProqramSearch.resources
+C:\Users\Acer\Desktop\c\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.TaskSearch.resources
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\bin\Debug\CSharpTask.exe.config
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\bin\Debug\CSharpTask.exe
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\bin\Debug\CSharpTask.pdb
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\bin\Debug\EntityFramework.dll
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\bin\Debug\EntityFramework.xml
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.csprojAssemblyReference.cache
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Form1.resources
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.Education_ProqramSearch.resources
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.EmployeeSearch.resources
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.GroupSearch.resources
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.StudentCRUD.resources
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.StudentSearch.resources
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.TaskSearch.resources
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.TeacherSearch.resources
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Properties.Resources.resources
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.csproj.GenerateResource.cache
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.csproj.CopyComplete
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.exe
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.pdb
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.TeacherCRUD.resources
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.EmployeeCRUD.resources
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.GroupCRUD.resources
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.TaskCRUD.resources
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.Education_ProqramsCRUD.resources
+C:\Users\Acer\Desktop\c#\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.ClassroomCRUD.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.csprojAssemblyReference.cache
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Form1.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.ClassroomCRUD.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.Education_ProqramsCRUD.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.Education_ProqramSearch.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.EmployeeCRUD.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.EmployeeSearch.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.GroupCRUD.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.GroupSearch.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.PositionCRUD.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.StudentCRUD.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.StudentSearch.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.TaskCRUD.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.TaskSearch.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.TeacherCRUD.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.TeacherSearch.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Properties.Resources.resources
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.csproj.GenerateResource.cache
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.exe
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.pdb
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\bin\Debug\CSharpTask.exe.config
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\bin\Debug\CSharpTask.exe
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\bin\Debug\CSharpTask.pdb
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\bin\Debug\EntityFramework.dll
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\bin\Debug\EntityFramework.xml
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Acer\Desktop\C# - Copy (3)\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.csproj.CopyComplete
