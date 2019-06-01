@@ -76,7 +76,7 @@ namespace CSharpTask.Models
         {
             using (AcademyEntities1 db = new AcademyEntities1())
             {
-                cbSpecGroup.DataSource = db.Education_Proqrams.Select(g => g.Name).ToList();
+                cbSpecGroup.DataSource = db.Education_Proqrams.Where(g => g.Status == true).Select(g => g.Name).ToList();
             }
         }
         private bool CreateStudent()

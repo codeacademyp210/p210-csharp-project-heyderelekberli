@@ -76,6 +76,31 @@ namespace CSharpTask.Models
             f1.Show();
         }
 
+        private void FilterByStudentWhoHasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvStudentSrch.Rows.Clear();
+
+            using (AcademyEntities1 db = new AcademyEntities1())
+            {
+                List<Models.Student> Task = db.Students.Where(su => su.Status == true).ToList();
+
+                foreach (var ts in Task)
+                {
+                    dgvStudentSrch.Rows.Add(ts.İd,
+                                        ts.Surname,
+                                        ts.Email,
+                                        ts.Phone,
+                                        ts.Fee,
+                                        ts.Group.Name
+                                        );
+                    if (ts.Fee < 3500)
+                    {
+                        dgvStudentSrch.Rows[dgvStudentSrch.Rows.Count - 1].DefaultCellStyle.BackColor = Color.Red;
+                    }
+                }
+            }
+        }
+
         private void DgvStudentSrch_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

@@ -74,9 +74,9 @@
             this.ColumnTeacherSpec,
             this.ColumnTeacherEmail,
             this.ColumnTeacherPhone});
-            this.dgvTeacherSrch.Location = new System.Drawing.Point(12, 66);
+            this.dgvTeacherSrch.Location = new System.Drawing.Point(0, 70);
             this.dgvTeacherSrch.Name = "dgvTeacherSrch";
-            this.dgvTeacherSrch.Size = new System.Drawing.Size(615, 277);
+            this.dgvTeacherSrch.Size = new System.Drawing.Size(656, 270);
             this.dgvTeacherSrch.TabIndex = 6;
             // 
             // ColumnTeacherID
@@ -119,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 355);
+            this.ClientSize = new System.Drawing.Size(657, 341);
             this.Controls.Add(this.TeacherSearchText);
             this.Controls.Add(this.TeacherSearchBtn);
             this.Controls.Add(this.dgvTeacherSrch);

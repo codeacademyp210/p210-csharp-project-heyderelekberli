@@ -36,7 +36,6 @@ namespace CSharpTask.Models
                                         em.Start_Time,
                                         em.Salary
                                         );
-
                 }
 
             }
@@ -78,6 +77,53 @@ namespace CSharpTask.Models
             }
         }
 
-      
+        private void SalaryUpperToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvEmployeeSrch.Rows.Clear();
+
+            using (AcademyEntities1 db = new AcademyEntities1())
+            {
+                List<Models.Employee> Empl = db.Employees.Where(sa => sa.Salary > 1000).ToList();
+
+                foreach (var em in Empl)
+                {
+                    dgvEmployeeSrch.Rows.Add(em.İd,
+                                        em.Name,
+                                        em.Surname,
+                                        em.Email,
+                                        em.Phone,
+                                        em.Position.Name,
+                                        em.Start_Time,
+                                        em.Salary
+                                        );
+                }
+
+            }
+        }
+
+        private void SalaryBetweenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgvEmployeeSrch.Rows.Clear();
+
+            using (AcademyEntities1 db = new AcademyEntities1())
+            {
+                List<Models.Employee> Empl = db.Employees.Where(sa => sa.Salary > 1000).Where(sa => sa.Salary < 1500).ToList();
+
+                foreach (var em in Empl)
+                {
+                    dgvEmployeeSrch.Rows.Add(em.İd,
+                                        em.Name,
+                                        em.Surname,
+                                        em.Email,
+                                        em.Phone,
+                                        em.Position.Name,
+                                        em.Start_Time,
+                                        em.Salary
+                                        );
+                }
+
+            }
+        
+        }
     }
 }

@@ -118,8 +118,8 @@ namespace CSharpTask.Models
                 {
 
                     Classroom newClass = db.Classrooms.Where(s => s.İd == ClassCRUD.İd).FirstOrDefault();
-                    newClass.Status = false;
-                    affectedRows = db.SaveChanges();
+                newClass.Status = false;
+                affectedRows = db.SaveChanges();
 
                 }
                 if (affectedRows > 0)

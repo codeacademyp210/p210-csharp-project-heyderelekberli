@@ -76,9 +76,9 @@
             this.ColumnGroupMentor,
             this.ColumnGroupCapacity,
             this.ColumnGroumEducation});
-            this.dgvGroupSrch.Location = new System.Drawing.Point(12, 62);
+            this.dgvGroupSrch.Location = new System.Drawing.Point(-1, 62);
             this.dgvGroupSrch.Name = "dgvGroupSrch";
-            this.dgvGroupSrch.Size = new System.Drawing.Size(764, 263);
+            this.dgvGroupSrch.Size = new System.Drawing.Size(785, 259);
             this.dgvGroupSrch.TabIndex = 12;
             // 
             // ColumnGroupID
@@ -127,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 337);
+            this.ClientSize = new System.Drawing.Size(787, 322);
             this.Controls.Add(this.GroupSearchText);
             this.Controls.Add(this.GroupSearchBtn);
             this.Controls.Add(this.dgvGroupSrch);

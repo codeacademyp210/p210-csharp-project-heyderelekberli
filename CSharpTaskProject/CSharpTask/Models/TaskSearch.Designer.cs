@@ -38,7 +38,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filterByDeadlineOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.filterByDeadlineOnnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaskSrch)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -116,9 +115,10 @@
             // 
             // filterToolStripMenuItem
             // 
+            this.filterToolStripMenuItem.BackColor = System.Drawing.Color.Aqua;
             this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.filterByDeadlineOffToolStripMenuItem,
-            this.filterByDeadlineOnnToolStripMenuItem});
+            this.filterByDeadlineOffToolStripMenuItem});
+            this.filterToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGreen;
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
             this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.filterToolStripMenuItem.Text = "Filter";
@@ -126,15 +126,9 @@
             // filterByDeadlineOffToolStripMenuItem
             // 
             this.filterByDeadlineOffToolStripMenuItem.Name = "filterByDeadlineOffToolStripMenuItem";
-            this.filterByDeadlineOffToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.filterByDeadlineOffToolStripMenuItem.Text = "Filter by Deadline Off";
+            this.filterByDeadlineOffToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.filterByDeadlineOffToolStripMenuItem.Text = "Filter by Deadline";
             this.filterByDeadlineOffToolStripMenuItem.Click += new System.EventHandler(this.FilterByDeadlineOffToolStripMenuItem_Click_1);
-            // 
-            // filterByDeadlineOnnToolStripMenuItem
-            // 
-            this.filterByDeadlineOnnToolStripMenuItem.Name = "filterByDeadlineOnnToolStripMenuItem";
-            this.filterByDeadlineOnnToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.filterByDeadlineOnnToolStripMenuItem.Text = "Filter by Deadline Onn";
             // 
             // TaskSearch
             // 
@@ -172,6 +166,5 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem filterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filterByDeadlineOffToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem filterByDeadlineOnnToolStripMenuItem;
     }
 }

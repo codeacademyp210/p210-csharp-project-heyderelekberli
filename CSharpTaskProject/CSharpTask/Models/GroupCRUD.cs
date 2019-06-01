@@ -68,10 +68,10 @@ namespace CSharpTask.Models
         {
             using (AcademyEntities1 db = new AcademyEntities1())
             {
-                cbGroupClassroom.DataSource = db.Classrooms.Select(g => g.Name).ToList();
-                cbGroupTeacher.DataSource = db.Teachers.Select(g => g.Name).ToList();
-                cbGroupMentor.DataSource = db.Employees.Select(g => g.Name).ToList();
-                cbGroupEducation.DataSource = db.Education_Proqrams.Select(g => g.Name).ToList();
+                cbGroupClassroom.DataSource = db.Classrooms.Where(g => g.Status ==true).Select(g => g.Name).ToList();
+                cbGroupTeacher.DataSource = db.Teachers.Where(g => g.Status == true).Select(g => g.Name).ToList();
+                cbGroupMentor.DataSource = db.Employees.Where(g => g.Status == true).Where(ju => ju.Position.Name == "Mentor").Select(g => g.Name).ToList();
+                cbGroupEducation.DataSource = db.Education_Proqrams.Where(g => g.Status == true).Select(g => g.Name).ToList();
             }
         }
         private bool CreateGroup()

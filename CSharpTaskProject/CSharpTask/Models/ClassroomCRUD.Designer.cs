@@ -54,7 +54,7 @@
             this.panelEmail.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelEmail.Location = new System.Drawing.Point(0, 0);
             this.panelEmail.Name = "panelEmail";
-            this.panelEmail.Size = new System.Drawing.Size(384, 272);
+            this.panelEmail.Size = new System.Drawing.Size(384, 228);
             this.panelEmail.TabIndex = 26;
             // 
             // ClassroomDeleteBtn
@@ -145,7 +145,7 @@
             this.ColumnClassCRUDName});
             this.dgvClassCreate.Location = new System.Drawing.Point(390, 0);
             this.dgvClassCreate.Name = "dgvClassCreate";
-            this.dgvClassCreate.Size = new System.Drawing.Size(248, 272);
+            this.dgvClassCreate.Size = new System.Drawing.Size(257, 228);
             this.dgvClassCreate.TabIndex = 27;
             this.dgvClassCreate.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvClassCreate_CellMouseDoubleClick);
             // 
@@ -165,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(638, 272);
+            this.ClientSize = new System.Drawing.Size(647, 228);
             this.Controls.Add(this.dgvClassCreate);
             this.Controls.Add(this.panelEmail);
             this.MaximizeBox = false;

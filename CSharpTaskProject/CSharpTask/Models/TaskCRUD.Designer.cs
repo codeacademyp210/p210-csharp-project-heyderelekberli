@@ -64,11 +64,13 @@
             this.panelEmail.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelEmail.Location = new System.Drawing.Point(0, 0);
             this.panelEmail.Name = "panelEmail";
-            this.panelEmail.Size = new System.Drawing.Size(384, 347);
+            this.panelEmail.Size = new System.Drawing.Size(384, 311);
             this.panelEmail.TabIndex = 25;
             // 
             // cbTaskGroup
             // 
+            this.cbTaskGroup.BackColor = System.Drawing.Color.IndianRed;
+            this.cbTaskGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbTaskGroup.FormattingEnabled = true;
             this.cbTaskGroup.Location = new System.Drawing.Point(121, 97);
             this.cbTaskGroup.Name = "cbTaskGroup";
@@ -182,6 +184,9 @@
             // 
             this.dgvTaskCreate.AllowUserToAddRows = false;
             this.dgvTaskCreate.AllowUserToDeleteRows = false;
+            this.dgvTaskCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTaskCreate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTaskCreate.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
             this.dgvTaskCreate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -190,10 +195,9 @@
             this.ColumnTaskCRUDName,
             this.ColumnTaskCRUDDeadline,
             this.ColumnTaskCRUDGroup});
-            this.dgvTaskCreate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvTaskCreate.Location = new System.Drawing.Point(390, 0);
+            this.dgvTaskCreate.Location = new System.Drawing.Point(382, 0);
             this.dgvTaskCreate.Name = "dgvTaskCreate";
-            this.dgvTaskCreate.Size = new System.Drawing.Size(405, 347);
+            this.dgvTaskCreate.Size = new System.Drawing.Size(403, 311);
             this.dgvTaskCreate.TabIndex = 26;
             this.dgvTaskCreate.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvTaskCreate_CellMouseDoubleClick);
             // 
@@ -225,7 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 347);
+            this.ClientSize = new System.Drawing.Size(786, 311);
             this.Controls.Add(this.dgvTaskCreate);
             this.Controls.Add(this.panelEmail);
             this.Name = "TaskCRUD";

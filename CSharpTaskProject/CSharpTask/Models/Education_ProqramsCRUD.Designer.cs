@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dgvEduCreate = new System.Windows.Forms.DataGridView();
+            this.ColumnEduCRUDİd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEduCRUDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEduCRUDPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EduNameTxt = new System.Windows.Forms.TextBox();
             this.EduPriceTxt = new System.Windows.Forms.TextBox();
             this.EduCRUDName = new System.Windows.Forms.Label();
@@ -38,9 +41,6 @@
             this.EduDeleteBtn = new System.Windows.Forms.Button();
             this.panelEmail = new System.Windows.Forms.Panel();
             this.EduCRUDPrice = new System.Windows.Forms.Label();
-            this.ColumnEduCRUDİd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEduCRUDName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEduCRUDPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEduCreate)).BeginInit();
             this.panelEmail.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +49,9 @@
             // 
             this.dgvEduCreate.AllowUserToAddRows = false;
             this.dgvEduCreate.AllowUserToDeleteRows = false;
+            this.dgvEduCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEduCreate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEduCreate.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
             this.dgvEduCreate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -56,12 +59,29 @@
             this.ColumnEduCRUDİd,
             this.ColumnEduCRUDName,
             this.ColumnEduCRUDPrice});
-            this.dgvEduCreate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvEduCreate.Location = new System.Drawing.Point(395, 0);
+            this.dgvEduCreate.Location = new System.Drawing.Point(379, 0);
             this.dgvEduCreate.Name = "dgvEduCreate";
-            this.dgvEduCreate.Size = new System.Drawing.Size(315, 288);
+            this.dgvEduCreate.Size = new System.Drawing.Size(296, 260);
             this.dgvEduCreate.TabIndex = 26;
             this.dgvEduCreate.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvEduCreate_CellMouseDoubleClick);
+            // 
+            // ColumnEduCRUDİd
+            // 
+            this.ColumnEduCRUDİd.HeaderText = "İd";
+            this.ColumnEduCRUDİd.Name = "ColumnEduCRUDİd";
+            this.ColumnEduCRUDİd.Visible = false;
+            // 
+            // ColumnEduCRUDName
+            // 
+            this.ColumnEduCRUDName.HeaderText = "Name";
+            this.ColumnEduCRUDName.Name = "ColumnEduCRUDName";
+            this.ColumnEduCRUDName.ReadOnly = true;
+            // 
+            // ColumnEduCRUDPrice
+            // 
+            this.ColumnEduCRUDPrice.HeaderText = "Price";
+            this.ColumnEduCRUDPrice.Name = "ColumnEduCRUDPrice";
+            this.ColumnEduCRUDPrice.ReadOnly = true;
             // 
             // EduNameTxt
             // 
@@ -159,7 +179,7 @@
             this.panelEmail.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelEmail.Location = new System.Drawing.Point(0, 0);
             this.panelEmail.Name = "panelEmail";
-            this.panelEmail.Size = new System.Drawing.Size(384, 288);
+            this.panelEmail.Size = new System.Drawing.Size(384, 260);
             this.panelEmail.TabIndex = 25;
             // 
             // EduCRUDPrice
@@ -171,29 +191,11 @@
             this.EduCRUDPrice.TabIndex = 1;
             this.EduCRUDPrice.Text = "Price";
             // 
-            // ColumnEduCRUDİd
-            // 
-            this.ColumnEduCRUDİd.HeaderText = "İd";
-            this.ColumnEduCRUDİd.Name = "ColumnEduCRUDİd";
-            this.ColumnEduCRUDİd.Visible = false;
-            // 
-            // ColumnEduCRUDName
-            // 
-            this.ColumnEduCRUDName.HeaderText = "Name";
-            this.ColumnEduCRUDName.Name = "ColumnEduCRUDName";
-            this.ColumnEduCRUDName.ReadOnly = true;
-            // 
-            // ColumnEduCRUDPrice
-            // 
-            this.ColumnEduCRUDPrice.HeaderText = "Price";
-            this.ColumnEduCRUDPrice.Name = "ColumnEduCRUDPrice";
-            this.ColumnEduCRUDPrice.ReadOnly = true;
-            // 
             // Education_ProqramsCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 288);
+            this.ClientSize = new System.Drawing.Size(673, 260);
             this.Controls.Add(this.dgvEduCreate);
             this.Controls.Add(this.panelEmail);
             this.MaximizeBox = false;

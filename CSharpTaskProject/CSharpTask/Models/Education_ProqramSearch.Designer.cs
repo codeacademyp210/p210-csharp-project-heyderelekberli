@@ -40,14 +40,14 @@
             // EducationSearchText
             // 
             this.EducationSearchText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EducationSearchText.Location = new System.Drawing.Point(12, 14);
+            this.EducationSearchText.Location = new System.Drawing.Point(3, 12);
             this.EducationSearchText.Name = "EducationSearchText";
             this.EducationSearchText.Size = new System.Drawing.Size(224, 31);
             this.EducationSearchText.TabIndex = 17;
             // 
             // EducationSearchBtn
             // 
-            this.EducationSearchBtn.Location = new System.Drawing.Point(242, 13);
+            this.EducationSearchBtn.Location = new System.Drawing.Point(233, 11);
             this.EducationSearchBtn.Name = "EducationSearchBtn";
             this.EducationSearchBtn.Size = new System.Drawing.Size(75, 32);
             this.EducationSearchBtn.TabIndex = 16;
@@ -68,9 +68,9 @@
             this.ColumnEduID,
             this.ColumnEduName,
             this.ColumnEduPrice});
-            this.dgvEducationSrch.Location = new System.Drawing.Point(12, 65);
+            this.dgvEducationSrch.Location = new System.Drawing.Point(3, 63);
             this.dgvEducationSrch.Name = "dgvEducationSrch";
-            this.dgvEducationSrch.Size = new System.Drawing.Size(301, 226);
+            this.dgvEducationSrch.Size = new System.Drawing.Size(321, 195);
             this.dgvEducationSrch.TabIndex = 15;
             // 
             // ColumnEduID
@@ -95,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 303);
+            this.ClientSize = new System.Drawing.Size(325, 253);
             this.Controls.Add(this.EducationSearchText);
             this.Controls.Add(this.EducationSearchBtn);
             this.Controls.Add(this.dgvEducationSrch);

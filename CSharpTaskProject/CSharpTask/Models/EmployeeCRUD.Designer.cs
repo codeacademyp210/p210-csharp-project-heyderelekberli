@@ -83,7 +83,7 @@
             this.panelEmail.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelEmail.Location = new System.Drawing.Point(0, 0);
             this.panelEmail.Name = "panelEmail";
-            this.panelEmail.Size = new System.Drawing.Size(384, 450);
+            this.panelEmail.Size = new System.Drawing.Size(384, 423);
             this.panelEmail.TabIndex = 24;
             // 
             // dtpEmployeeCreate
@@ -276,6 +276,9 @@
             // 
             this.dgvEmployeeCreate.AllowUserToAddRows = false;
             this.dgvEmployeeCreate.AllowUserToDeleteRows = false;
+            this.dgvEmployeeCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEmployeeCreate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmployeeCreate.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
             this.dgvEmployeeCreate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -287,10 +290,9 @@
             this.ColumnEmpCRUDPosition,
             this.ColumnEmpCRUDStart,
             this.ColumnEmpCRUDSalary});
-            this.dgvEmployeeCreate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvEmployeeCreate.Location = new System.Drawing.Point(390, 0);
+            this.dgvEmployeeCreate.Location = new System.Drawing.Point(382, 0);
             this.dgvEmployeeCreate.Name = "dgvEmployeeCreate";
-            this.dgvEmployeeCreate.Size = new System.Drawing.Size(480, 450);
+            this.dgvEmployeeCreate.Size = new System.Drawing.Size(516, 423);
             this.dgvEmployeeCreate.TabIndex = 25;
             this.dgvEmployeeCreate.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvEmployeeCreate_CellMouseDoubleClick);
             // 
@@ -340,7 +342,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 450);
+            this.ClientSize = new System.Drawing.Size(897, 423);
             this.Controls.Add(this.dgvEmployeeCreate);
             this.Controls.Add(this.panelEmail);
             this.Name = "EmployeeCRUD";

@@ -65,11 +65,6 @@ namespace CSharpTask.Models
                                           item.Deadline,
                                           item.Group.Name
                                           );
-                    //if (item.Deadline > DateTime.Now)
-                    //{
-                    //    dgvTaskSrch.Rows[dgvTaskSrch.Rows.Count - 1].DefaultCellStyle.BackColor = Color.Red;
-
-                    //}
                 }
             }
         }

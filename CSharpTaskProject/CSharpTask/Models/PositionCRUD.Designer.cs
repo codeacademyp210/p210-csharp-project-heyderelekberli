@@ -54,7 +54,7 @@
             this.panelEmail.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelEmail.Location = new System.Drawing.Point(0, 0);
             this.panelEmail.Name = "panelEmail";
-            this.panelEmail.Size = new System.Drawing.Size(384, 230);
+            this.panelEmail.Size = new System.Drawing.Size(384, 197);
             this.panelEmail.TabIndex = 28;
             // 
             // PositionDeleteBtn
@@ -134,16 +134,18 @@
             // 
             this.dgvPositionCreate.AllowUserToAddRows = false;
             this.dgvPositionCreate.AllowUserToDeleteRows = false;
+            this.dgvPositionCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPositionCreate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPositionCreate.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
             this.dgvPositionCreate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPositionCreate.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnPosCRUDİd,
             this.ColumnPosCRUDName});
-            this.dgvPositionCreate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvPositionCreate.Location = new System.Drawing.Point(390, 0);
+            this.dgvPositionCreate.Location = new System.Drawing.Point(384, 0);
             this.dgvPositionCreate.Name = "dgvPositionCreate";
-            this.dgvPositionCreate.Size = new System.Drawing.Size(235, 230);
+            this.dgvPositionCreate.Size = new System.Drawing.Size(226, 197);
             this.dgvPositionCreate.TabIndex = 29;
             this.dgvPositionCreate.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvPositionCreate_CellMouseDoubleClick_1);
             // 
@@ -163,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 230);
+            this.ClientSize = new System.Drawing.Size(613, 197);
             this.Controls.Add(this.dgvPositionCreate);
             this.Controls.Add(this.panelEmail);
             this.MaximizeBox = false;

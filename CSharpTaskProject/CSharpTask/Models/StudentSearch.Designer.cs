@@ -38,7 +38,11 @@
             this.ColumnStudentPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnStudentFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnStudentGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filterByStudentWhoHasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentSrch)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // StudentSearchText
@@ -46,9 +50,9 @@
             this.StudentSearchText.BackColor = System.Drawing.Color.PaleGreen;
             this.StudentSearchText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentSearchText.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.StudentSearchText.Location = new System.Drawing.Point(12, 13);
+            this.StudentSearchText.Location = new System.Drawing.Point(0, 44);
             this.StudentSearchText.Name = "StudentSearchText";
-            this.StudentSearchText.Size = new System.Drawing.Size(521, 31);
+            this.StudentSearchText.Size = new System.Drawing.Size(533, 31);
             this.StudentSearchText.TabIndex = 5;
             // 
             // SearchBtn
@@ -56,7 +60,7 @@
             this.SearchBtn.BackColor = System.Drawing.Color.Aqua;
             this.SearchBtn.FlatAppearance.BorderSize = 0;
             this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SearchBtn.Location = new System.Drawing.Point(552, 11);
+            this.SearchBtn.Location = new System.Drawing.Point(539, 44);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(75, 32);
             this.SearchBtn.TabIndex = 4;
@@ -82,9 +86,9 @@
             this.ColumnStudentPhone,
             this.ColumnStudentFee,
             this.ColumnStudentGroup});
-            this.dgvStudentSrch.Location = new System.Drawing.Point(12, 60);
+            this.dgvStudentSrch.Location = new System.Drawing.Point(0, 93);
             this.dgvStudentSrch.Name = "dgvStudentSrch";
-            this.dgvStudentSrch.Size = new System.Drawing.Size(615, 303);
+            this.dgvStudentSrch.Size = new System.Drawing.Size(626, 338);
             this.dgvStudentSrch.TabIndex = 3;
             this.dgvStudentSrch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvStudentSrch_CellContentClick);
             // 
@@ -130,20 +134,51 @@
             this.ColumnStudentGroup.Name = "ColumnStudentGroup";
             this.ColumnStudentGroup.ReadOnly = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filterToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(625, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // filterToolStripMenuItem
+            // 
+            this.filterToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
+            this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filterByStudentWhoHasToolStripMenuItem});
+            this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
+            this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.filterToolStripMenuItem.Text = "Filter";
+            // 
+            // filterByStudentWhoHasToolStripMenuItem
+            // 
+            this.filterByStudentWhoHasToolStripMenuItem.Name = "filterByStudentWhoHasToolStripMenuItem";
+            this.filterByStudentWhoHasToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.filterByStudentWhoHasToolStripMenuItem.Text = "Filter by Students who have  dept";
+            this.filterByStudentWhoHasToolStripMenuItem.Click += new System.EventHandler(this.FilterByStudentWhoHasToolStripMenuItem_Click);
+            // 
             // StudentSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 375);
+            this.ClientSize = new System.Drawing.Size(625, 435);
             this.Controls.Add(this.StudentSearchText);
             this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.dgvStudentSrch);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "StudentSearch";
             this.Text = "StudentSearch";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StudentSearch_FormClosed_1);
             this.Load += new System.EventHandler(this.StudentSearch_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentSrch)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,5 +196,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnStudentPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnStudentFee;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnStudentGroup;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem filterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filterByStudentWhoHasToolStripMenuItem;
     }
 }

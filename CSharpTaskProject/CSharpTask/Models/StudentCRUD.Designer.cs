@@ -76,9 +76,10 @@
             this.panelEmail.Controls.Add(this.StudentEmailTxt);
             this.panelEmail.Controls.Add(this.StudentSurnameTxt);
             this.panelEmail.Controls.Add(this.StudentNameTxt);
-            this.panelEmail.Location = new System.Drawing.Point(8, 0);
+            this.panelEmail.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelEmail.Location = new System.Drawing.Point(0, 0);
             this.panelEmail.Name = "panelEmail";
-            this.panelEmail.Size = new System.Drawing.Size(384, 393);
+            this.panelEmail.Size = new System.Drawing.Size(384, 392);
             this.panelEmail.TabIndex = 0;
             // 
             // cbStudentGroup
@@ -251,6 +252,9 @@
             this.dgvStudentCreate.AllowUserToAddRows = false;
             this.dgvStudentCreate.AllowUserToDeleteRows = false;
             this.dgvStudentCreate.AllowUserToResizeColumns = false;
+            this.dgvStudentCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvStudentCreate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStudentCreate.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
             this.dgvStudentCreate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -262,10 +266,9 @@
             this.ColumnPhone,
             this.ColumnFee,
             this.ColumnGroup});
-            this.dgvStudentCreate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvStudentCreate.Location = new System.Drawing.Point(398, 0);
+            this.dgvStudentCreate.Location = new System.Drawing.Point(384, 0);
             this.dgvStudentCreate.Name = "dgvStudentCreate";
-            this.dgvStudentCreate.Size = new System.Drawing.Size(596, 393);
+            this.dgvStudentCreate.Size = new System.Drawing.Size(510, 392);
             this.dgvStudentCreate.TabIndex = 1;
             this.dgvStudentCreate.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvStudentCreate_CellMouseDoubleClick);
             // 
@@ -315,7 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(994, 393);
+            this.ClientSize = new System.Drawing.Size(893, 392);
             this.Controls.Add(this.dgvStudentCreate);
             this.Controls.Add(this.panelEmail);
             this.MaximizeBox = false;

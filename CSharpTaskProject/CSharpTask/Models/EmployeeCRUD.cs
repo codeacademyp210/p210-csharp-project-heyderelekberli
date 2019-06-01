@@ -43,7 +43,7 @@ namespace CSharpTask.Models
                     MessageBox.Show("Please, Enter correct Phone format", "Warning");
                     return true;
                 }
-                if (!Regex.Match(EmployeeSalaryTxt.Text, "(\\d{4})").Success)
+                if (!Regex.Match(EmployeeSalaryTxt.Text, "(\\d)").Success)
                 {
                 MessageBox.Show("Please, Enter correct Salary format", "Warning");
                 return true;
@@ -82,7 +82,7 @@ namespace CSharpTask.Models
             {
                 using (AcademyEntities1 db = new AcademyEntities1())
                 {
-                    cbPositionGroup.DataSource = db.Positions.Select(g => g.Name).ToList();
+                    cbPositionGroup.DataSource = db.Positions.Where(g => g.Status == true).Select(g => g.Name).ToList();
                 }
             }
             private bool CreateEmployee()

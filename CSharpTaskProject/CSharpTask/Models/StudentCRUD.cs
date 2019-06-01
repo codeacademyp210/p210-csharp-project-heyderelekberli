@@ -84,7 +84,7 @@ namespace CSharpTask.Models
         {
             using (AcademyEntities1 db = new AcademyEntities1())
             {
-                cbStudentGroup.DataSource = db.Groups.Select(g => g.Name).ToList();
+                cbStudentGroup.DataSource = db.Groups.Where(g => g.Status == true).Select(g => g.Name).ToList();
             }
         }
         private void StudentCreateBtn_Click(object sender, EventArgs e)

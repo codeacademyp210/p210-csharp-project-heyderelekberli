@@ -39,20 +39,25 @@
             this.ColumnEmployeePosition = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnEmployeeStartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnEmployeeSalary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salaryUpperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salaryBetweenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeSrch)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // EmployeeSearchText
             // 
             this.EmployeeSearchText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeSearchText.Location = new System.Drawing.Point(12, 13);
+            this.EmployeeSearchText.Location = new System.Drawing.Point(0, 47);
             this.EmployeeSearchText.Name = "EmployeeSearchText";
             this.EmployeeSearchText.Size = new System.Drawing.Size(523, 31);
             this.EmployeeSearchText.TabIndex = 11;
             // 
             // EmployeeSearchBtn
             // 
-            this.EmployeeSearchBtn.Location = new System.Drawing.Point(552, 13);
+            this.EmployeeSearchBtn.Location = new System.Drawing.Point(540, 47);
             this.EmployeeSearchBtn.Name = "EmployeeSearchBtn";
             this.EmployeeSearchBtn.Size = new System.Drawing.Size(75, 32);
             this.EmployeeSearchBtn.TabIndex = 10;
@@ -78,9 +83,9 @@
             this.ColumnEmployeePosition,
             this.ColumnEmployeeStartTime,
             this.ColumnEmployeeSalary});
-            this.dgvEmployeeSrch.Location = new System.Drawing.Point(12, 60);
+            this.dgvEmployeeSrch.Location = new System.Drawing.Point(0, 95);
             this.dgvEmployeeSrch.Name = "dgvEmployeeSrch";
-            this.dgvEmployeeSrch.Size = new System.Drawing.Size(615, 324);
+            this.dgvEmployeeSrch.Size = new System.Drawing.Size(636, 252);
             this.dgvEmployeeSrch.TabIndex = 9;
             // 
             // ColumnEmployeeID
@@ -131,14 +136,49 @@
             this.ColumnEmployeeSalary.Name = "ColumnEmployeeSalary";
             this.ColumnEmployeeSalary.ReadOnly = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filterToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(636, 24);
+            this.menuStrip1.TabIndex = 12;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // filterToolStripMenuItem
+            // 
+            this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salaryUpperToolStripMenuItem,
+            this.salaryBetweenToolStripMenuItem});
+            this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
+            this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.filterToolStripMenuItem.Text = "Filter";
+            // 
+            // salaryUpperToolStripMenuItem
+            // 
+            this.salaryUpperToolStripMenuItem.Name = "salaryUpperToolStripMenuItem";
+            this.salaryUpperToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.salaryUpperToolStripMenuItem.Text = "Salary Upper 1000";
+            this.salaryUpperToolStripMenuItem.Click += new System.EventHandler(this.SalaryUpperToolStripMenuItem_Click);
+            // 
+            // salaryBetweenToolStripMenuItem
+            // 
+            this.salaryBetweenToolStripMenuItem.Name = "salaryBetweenToolStripMenuItem";
+            this.salaryBetweenToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.salaryBetweenToolStripMenuItem.Text = "Salary between 1000 and 1500";
+            this.salaryBetweenToolStripMenuItem.Click += new System.EventHandler(this.SalaryBetweenToolStripMenuItem_Click);
+            // 
             // EmployeeSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 396);
+            this.ClientSize = new System.Drawing.Size(636, 347);
             this.Controls.Add(this.EmployeeSearchText);
             this.Controls.Add(this.EmployeeSearchBtn);
             this.Controls.Add(this.dgvEmployeeSrch);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EmployeeSearch";
@@ -146,6 +186,8 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EmployeeSearch_FormClosed);
             this.Load += new System.EventHandler(this.EmployeeSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployeeSrch)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,5 +206,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEmployeePosition;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEmployeeStartTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEmployeeSalary;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem filterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salaryUpperToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salaryBetweenToolStripMenuItem;
     }
 }

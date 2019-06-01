@@ -79,7 +79,7 @@
             this.panelEmail.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelEmail.Location = new System.Drawing.Point(0, 0);
             this.panelEmail.Name = "panelEmail";
-            this.panelEmail.Size = new System.Drawing.Size(384, 397);
+            this.panelEmail.Size = new System.Drawing.Size(384, 378);
             this.panelEmail.TabIndex = 25;
             // 
             // cbGroupMentor
@@ -253,6 +253,9 @@
             // 
             this.dgvGroupCreate.AllowUserToAddRows = false;
             this.dgvGroupCreate.AllowUserToDeleteRows = false;
+            this.dgvGroupCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvGroupCreate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvGroupCreate.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
             this.dgvGroupCreate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -264,10 +267,9 @@
             this.ColumnGroupCRUDMentor,
             this.ColumnGroupCRUDCapacity,
             this.ColumnGroupCRUDEdu});
-            this.dgvGroupCreate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvGroupCreate.Location = new System.Drawing.Point(389, 0);
+            this.dgvGroupCreate.Location = new System.Drawing.Point(381, 0);
             this.dgvGroupCreate.Name = "dgvGroupCreate";
-            this.dgvGroupCreate.Size = new System.Drawing.Size(556, 397);
+            this.dgvGroupCreate.Size = new System.Drawing.Size(528, 378);
             this.dgvGroupCreate.TabIndex = 26;
             this.dgvGroupCreate.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvGroupCreate_CellMouseDoubleClick);
             // 
@@ -317,7 +319,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(945, 397);
+            this.ClientSize = new System.Drawing.Size(909, 378);
             this.Controls.Add(this.dgvGroupCreate);
             this.Controls.Add(this.panelEmail);
             this.MaximizeBox = false;

@@ -58,7 +58,8 @@
             // 
             this.dgvTeacherCreate.AllowUserToAddRows = false;
             this.dgvTeacherCreate.AllowUserToDeleteRows = false;
-            this.dgvTeacherCreate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvTeacherCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTeacherCreate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTeacherCreate.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
@@ -70,9 +71,9 @@
             this.ColumnTeacherCRUDSpec,
             this.ColumnTeacherCRUDEmail,
             this.ColumnTeacherCRUDPhone});
-            this.dgvTeacherCreate.Location = new System.Drawing.Point(390, 0);
+            this.dgvTeacherCreate.Location = new System.Drawing.Point(383, 0);
             this.dgvTeacherCreate.Name = "dgvTeacherCreate";
-            this.dgvTeacherCreate.Size = new System.Drawing.Size(596, 377);
+            this.dgvTeacherCreate.Size = new System.Drawing.Size(531, 371);
             this.dgvTeacherCreate.TabIndex = 22;
             this.dgvTeacherCreate.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvTeacherCreate_CellMouseDoubleClick);
             // 
@@ -114,7 +115,6 @@
             // 
             // panelEmail
             // 
-            this.panelEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelEmail.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panelEmail.Controls.Add(this.cbSpecGroup);
             this.panelEmail.Controls.Add(this.TeacherDeleteBtn);
@@ -130,9 +130,10 @@
             this.panelEmail.Controls.Add(this.TeacherEmailTxt);
             this.panelEmail.Controls.Add(this.TeacherSurnameTxt);
             this.panelEmail.Controls.Add(this.TeacherNameTxt);
+            this.panelEmail.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelEmail.Location = new System.Drawing.Point(0, 0);
             this.panelEmail.Name = "panelEmail";
-            this.panelEmail.Size = new System.Drawing.Size(384, 377);
+            this.panelEmail.Size = new System.Drawing.Size(384, 371);
             this.panelEmail.TabIndex = 23;
             // 
             // cbSpecGroup
@@ -286,7 +287,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 377);
+            this.ClientSize = new System.Drawing.Size(914, 371);
             this.Controls.Add(this.panelEmail);
             this.Controls.Add(this.dgvTeacherCreate);
             this.MaximizeBox = false;
