@@ -89,6 +89,7 @@
           <ScalarProperty Name="StudentİD" ColumnName="StudentİD" />
           <ScalarProperty Name="TaskİD" ColumnName="TaskİD" />
           <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

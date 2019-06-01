@@ -18,6 +18,7 @@ namespace CSharpTask.Models
         public int StudentİD { get; set; }
         public int TaskİD { get; set; }
         public int Mark { get; set; }
+        public Nullable<bool> Status { get; set; }
     
         public virtual Student Student { get; set; }
         public virtual Task Task { get; set; }

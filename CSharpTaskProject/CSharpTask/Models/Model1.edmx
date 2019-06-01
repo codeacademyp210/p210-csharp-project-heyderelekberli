@@ -87,6 +87,7 @@
           <Property Name="StudentİD" Type="int" Nullable="false" />
           <Property Name="TaskİD" Type="int" Nullable="false" />
           <Property Name="Mark" Type="int" Nullable="false" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityType Name="Tasks">
           <Key>
@@ -383,6 +384,7 @@
           <Property Name="StudentİD" Type="Int32" Nullable="false" />
           <Property Name="TaskİD" Type="Int32" Nullable="false" />
           <Property Name="Mark" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Boolean" />
           <NavigationProperty Name="Student" Relationship="Self.FK_Task_Marks_Students" FromRole="Task_Marks" ToRole="Students" />
           <NavigationProperty Name="Task" Relationship="Self.FK_Task_Marks_Tasks" FromRole="Task_Marks" ToRole="Tasks" />
         </EntityType>
@@ -678,6 +680,7 @@
                 <ScalarProperty Name="StudentİD" ColumnName="StudentİD" />
                 <ScalarProperty Name="TaskİD" ColumnName="TaskİD" />
                 <ScalarProperty Name="Mark" ColumnName="Mark" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

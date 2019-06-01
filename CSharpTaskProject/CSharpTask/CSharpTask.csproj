@@ -65,6 +65,12 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AcademyEntities.cs" />
+    <Compile Include="Models\CheckedMarkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\CheckedMarkForm.Designer.cs">
+      <DependentUpon>CheckedMarkForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Classroom.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -118,6 +124,12 @@
     </Compile>
     <Compile Include="Models\GroupSearch.Designer.cs">
       <DependentUpon>GroupSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarkCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\MarkCRUD.Designer.cs">
+      <DependentUpon>MarkCRUD.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -196,6 +208,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Models\CheckedMarkForm.resx">
+      <DependentUpon>CheckedMarkForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Models\ClassroomCRUD.resx">
       <DependentUpon>ClassroomCRUD.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Models\GroupSearch.resx">
       <DependentUpon>GroupSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\MarkCRUD.resx">
+      <DependentUpon>MarkCRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Models\PositionCRUD.resx">
       <DependentUpon>PositionCRUD.cs</DependentUpon>

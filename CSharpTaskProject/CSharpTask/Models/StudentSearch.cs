@@ -87,6 +87,7 @@ namespace CSharpTask.Models
                 foreach (var ts in Task)
                 {
                     dgvStudentSrch.Rows.Add(ts.İd,
+                                        ts.Name,
                                         ts.Surname,
                                         ts.Email,
                                         ts.Phone,
@@ -99,11 +100,6 @@ namespace CSharpTask.Models
                     }
                 }
             }
-        }
-
-        private void DgvStudentSrch_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

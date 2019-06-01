@@ -82,6 +82,7 @@
     <Property Name="StudentİD" Type="int" Nullable="false" />
     <Property Name="TaskİD" Type="int" Nullable="false" />
     <Property Name="Mark" Type="int" Nullable="false" />
+    <Property Name="Status" Type="bit" />
   </EntityType>
   <EntityType Name="Tasks">
     <Key>

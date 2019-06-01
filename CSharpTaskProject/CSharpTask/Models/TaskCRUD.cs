@@ -66,7 +66,6 @@ namespace CSharpTask.Models
                 int affectedRows = 0;
                 using (AcademyEntities1 db = new AcademyEntities1())
                 {
-
                     int groupID = (db.Groups.Where(g => g.Name == cbTaskGroup.SelectedItem.ToString()).FirstOrDefault()).ID;
                     Task task = new Task
                     {

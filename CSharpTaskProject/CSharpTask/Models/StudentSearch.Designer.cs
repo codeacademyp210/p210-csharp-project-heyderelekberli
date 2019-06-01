@@ -90,7 +90,6 @@
             this.dgvStudentSrch.Name = "dgvStudentSrch";
             this.dgvStudentSrch.Size = new System.Drawing.Size(626, 338);
             this.dgvStudentSrch.TabIndex = 3;
-            this.dgvStudentSrch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvStudentSrch_CellContentClick);
             // 
             // ColumnStudentID
             // 

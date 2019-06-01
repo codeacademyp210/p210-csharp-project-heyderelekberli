@@ -118,5 +118,12 @@ namespace CSharpTask
             PositionCRUD Poss = new PositionCRUD();
             Poss.ShowDialog();
         }
+
+        private void MarkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MarkCRUD Mark = new MarkCRUD();
+            Mark.ShowDialog();
+        }
     }
 }
