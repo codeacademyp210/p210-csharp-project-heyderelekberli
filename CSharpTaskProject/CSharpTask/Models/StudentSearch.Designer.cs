@@ -41,6 +41,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filterByStudentWhoHasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.amountOfDeptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentSrch)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -147,7 +148,8 @@
             // 
             this.filterToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
             this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.filterByStudentWhoHasToolStripMenuItem});
+            this.filterByStudentWhoHasToolStripMenuItem,
+            this.amountOfDeptToolStripMenuItem});
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
             this.filterToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.filterToolStripMenuItem.Text = "Filter";
@@ -158,6 +160,13 @@
             this.filterByStudentWhoHasToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.filterByStudentWhoHasToolStripMenuItem.Text = "Filter by Students who have  dept";
             this.filterByStudentWhoHasToolStripMenuItem.Click += new System.EventHandler(this.FilterByStudentWhoHasToolStripMenuItem_Click);
+            // 
+            // amountOfDeptToolStripMenuItem
+            // 
+            this.amountOfDeptToolStripMenuItem.Name = "amountOfDeptToolStripMenuItem";
+            this.amountOfDeptToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.amountOfDeptToolStripMenuItem.Text = "Amount of Dept";
+            this.amountOfDeptToolStripMenuItem.Click += new System.EventHandler(this.AmountOfDeptToolStripMenuItem_Click);
             // 
             // StudentSearch
             // 
@@ -198,5 +207,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem filterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filterByStudentWhoHasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem amountOfDeptToolStripMenuItem;
     }
 }

@@ -101,5 +101,11 @@ namespace CSharpTask.Models
                 }
             }
         }
+        private void AmountOfDeptToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AmountDept dept = new AmountDept();
+            dept.ShowDialog();
+        }
     }
 }
