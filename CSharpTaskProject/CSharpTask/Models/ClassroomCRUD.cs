@@ -212,9 +212,6 @@ namespace CSharpTask.Models
             f1.Show();
         }
     }
- 
-
-    
 
 }
 

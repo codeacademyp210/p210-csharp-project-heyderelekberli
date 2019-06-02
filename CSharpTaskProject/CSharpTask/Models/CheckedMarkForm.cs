@@ -102,6 +102,11 @@ namespace CSharpTask.Models
 
             }
         }
+
+        private void DgvMarkCreate_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

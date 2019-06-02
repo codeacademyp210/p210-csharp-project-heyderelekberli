@@ -23,7 +23,7 @@ namespace CSharpTask.Models
 
             using (AcademyEntities1 db = new AcademyEntities1())
             {
-                List<Models.Task> Task = db.Tasks.ToList();
+                List<Models.Task> Task = db.Tasks.Where(su => su.Status == true).ToList();
 
                 foreach (var ts in Task)
                 {
@@ -32,11 +32,6 @@ namespace CSharpTask.Models
                                         ts.Deadline,
                                         ts.Group.Name
                                         );
-                    //if (ts.Deadline > DateTime.Now)
-                    //{
-                    //    dgvTaskSrch.Rows[dgvTaskSrch.Rows.Count - 1].DefaultCellStyle.BackColor = Color.Red;
-
-                    //}
                 }
             }
         }
@@ -50,7 +45,7 @@ namespace CSharpTask.Models
             string TaskSrcTxt = TaskSearchText.Text.Trim().ToLower();
             using (AcademyEntities1 db = new AcademyEntities1())
             {
-                List<Models.Task> taskList = db.Tasks.Where(tsk =>
+                List<Models.Task> taskList = db.Tasks.Where(su => su.Status == true).Where(tsk =>
                     tsk.Name.ToLower().Contains(TaskSrcTxt) ||
                     tsk.Deadline.ToString().Contains(TaskSrcTxt) ||
                     tsk.Group.Name.ToLower().Contains(TaskSrcTxt)
@@ -81,7 +76,7 @@ namespace CSharpTask.Models
 
             using (AcademyEntities1 db = new AcademyEntities1())
             {
-                List<Models.Task> Task = db.Tasks.ToList();
+                List<Models.Task> Task = db.Tasks.Where(su => su.Status == true).ToList();
 
                 foreach (var ts in Task)
                 {

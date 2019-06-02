@@ -125,5 +125,12 @@ namespace CSharpTask
             MarkCRUD Mark = new MarkCRUD();
             Mark.ShowDialog();
         }
+
+        private void InfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InfoForm Info = new InfoForm();
+            Info.ShowDialog();
+        }
     }
 }

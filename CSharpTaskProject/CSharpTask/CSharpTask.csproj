@@ -42,6 +42,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -124,6 +125,12 @@
     </Compile>
     <Compile Include="Models\GroupSearch.Designer.cs">
       <DependentUpon>GroupSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\InfoForm.Designer.cs">
+      <DependentUpon>InfoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\MarkCRUD.cs">
       <SubType>Form</SubType>
@@ -231,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Models\GroupSearch.resx">
       <DependentUpon>GroupSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Models\MarkCRUD.resx">
       <DependentUpon>MarkCRUD.cs</DependentUpon>

@@ -45,7 +45,7 @@ namespace CSharpTask.Models
                 MessageBox.Show("Please, Enter correct Phone format", "Warning");
                 return true;
             }
-            if (!Regex.Match(StudentFeeTxt.Text, "(\\d{4})").Success)
+            if (!Regex.Match(StudentFeeTxt.Text, "(\\d)").Success)
             {
                 MessageBox.Show("Please, Enter correct Fee format", "Warning");
                 return true;

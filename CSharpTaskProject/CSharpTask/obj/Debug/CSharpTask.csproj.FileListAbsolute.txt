@@ -107,3 +107,4 @@ C:\Users\Acer\Desktop\C#\p210\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.
 C:\Users\Acer\Desktop\C#\p210\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.pdb
 C:\Users\Acer\Desktop\C#\p210\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.MarkCRUD.resources
 C:\Users\Acer\Desktop\C#\p210\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.CheckedMarkForm.resources
+C:\Users\Acer\Desktop\C#\p210\CSharpTaskProject\CSharpTask\obj\Debug\CSharpTask.Models.InfoForm.resources

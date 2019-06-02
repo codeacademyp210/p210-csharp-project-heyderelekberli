@@ -23,7 +23,7 @@ namespace CSharpTask.Models
 
             using (AcademyEntities1 db = new AcademyEntities1())
             {
-                List<Models.Education_Proqrams> Educ = db.Education_Proqrams.ToList();
+                List<Models.Education_Proqrams> Educ = db.Education_Proqrams.Where(su => su.Status == true).ToList();
 
                 foreach (var edu in Educ)
                 {
@@ -45,7 +45,7 @@ namespace CSharpTask.Models
             string EducationSrcTxt = EducationSearchText.Text.Trim().ToLower();
             using (AcademyEntities1 db = new AcademyEntities1())
             {
-                List<Models.Education_Proqrams> employeeList = db.Education_Proqrams.Where(edu =>
+                List<Models.Education_Proqrams> employeeList = db.Education_Proqrams.Where(su => su.Status == true).Where(edu =>
                     edu.Name.ToLower().Contains(EducationSrcTxt) ||
                     edu.Price.ToString().Contains(EducationSrcTxt)
                 ).ToList();

@@ -23,7 +23,7 @@ namespace CSharpTask.Models
 
             using (AcademyEntities1 db = new AcademyEntities1())
             {
-                List<Models.Employee> Empl = db.Employees.ToList();
+                List<Models.Employee> Empl = db.Employees.Where(su => su.Status == true).ToList();
 
                 foreach (var em in Empl)
                 {
@@ -57,7 +57,7 @@ namespace CSharpTask.Models
             string EmployeeSrcTxt = EmployeeSearchText.Text.Trim().ToLower();
             using (AcademyEntities1 db = new AcademyEntities1())
             {
-                List<Models.Employee> employeeList = db.Employees.Where(emp =>
+                List<Models.Employee> employeeList = db.Employees.Where(su => su.Status == true).Where(emp =>
                     emp.Name.ToLower().Contains(EmployeeSrcTxt) ||
                     emp.Surname.ToLower().Contains(EmployeeSrcTxt) ||
                     emp.Email.ToLower().Contains(EmployeeSrcTxt) ||
@@ -83,7 +83,7 @@ namespace CSharpTask.Models
 
             using (AcademyEntities1 db = new AcademyEntities1())
             {
-                List<Models.Employee> Empl = db.Employees.Where(sa => sa.Salary > 1000).ToList();
+                List<Models.Employee> Empl = db.Employees.Where(su => su.Status == true).Where(sa => sa.Salary > 1000).ToList();
 
                 foreach (var em in Empl)
                 {
@@ -107,7 +107,7 @@ namespace CSharpTask.Models
 
             using (AcademyEntities1 db = new AcademyEntities1())
             {
-                List<Models.Employee> Empl = db.Employees.Where(sa => sa.Salary > 1000).Where(sa => sa.Salary < 1500).ToList();
+                List<Models.Employee> Empl = db.Employees.Where(su => su.Status == true).Where(sa => sa.Salary > 1000).Where(sa => sa.Salary < 1500).ToList();
 
                 foreach (var em in Empl)
                 {

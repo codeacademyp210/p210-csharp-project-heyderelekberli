@@ -30,6 +30,11 @@ namespace CSharpTask.Models
                 MessageBox.Show("Input wouldn't be empty");
                 return true;
             }
+            if (!Regex.Match(GroupNameTxt.Text, @"^\w+$").Success)
+            {
+                MessageBox.Show("Group Name would be just number or letter", "Warning");
+                return true;
+            }
             if (!Regex.Match(GroupCapacityTxt.Text, "^\\d+$").Success)
             {
                 MessageBox.Show("Please, Enter correct Capacity format", "Warning");

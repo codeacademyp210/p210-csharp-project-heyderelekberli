@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.dgvMarkCreate = new System.Windows.Forms.DataGridView();
-            this.cbCheckedGroup = new System.Windows.Forms.ComboBox();
-            this.ChooseBtn = new System.Windows.Forms.Button();
             this.ColumnMarkCRUDİd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnMarkCRUDStudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnMArkCRUDGroupID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnMarkTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCheckedMarkGroup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnMarkChecked = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbCheckedGroup = new System.Windows.Forms.ComboBox();
+            this.ChooseBtn = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.filterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.filterByMarkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,27 +67,7 @@
             this.dgvMarkCreate.Name = "dgvMarkCreate";
             this.dgvMarkCreate.Size = new System.Drawing.Size(478, 314);
             this.dgvMarkCreate.TabIndex = 28;
-            // 
-            // cbCheckedGroup
-            // 
-            this.cbCheckedGroup.BackColor = System.Drawing.Color.IndianRed;
-            this.cbCheckedGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbCheckedGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCheckedGroup.FormattingEnabled = true;
-            this.cbCheckedGroup.Location = new System.Drawing.Point(0, 54);
-            this.cbCheckedGroup.Name = "cbCheckedGroup";
-            this.cbCheckedGroup.Size = new System.Drawing.Size(349, 33);
-            this.cbCheckedGroup.TabIndex = 29;
-            // 
-            // ChooseBtn
-            // 
-            this.ChooseBtn.Location = new System.Drawing.Point(366, 54);
-            this.ChooseBtn.Name = "ChooseBtn";
-            this.ChooseBtn.Size = new System.Drawing.Size(75, 33);
-            this.ChooseBtn.TabIndex = 30;
-            this.ChooseBtn.Text = "Choose";
-            this.ChooseBtn.UseVisualStyleBackColor = true;
-            this.ChooseBtn.Click += new System.EventHandler(this.ChooseBtn_Click);
+            this.dgvMarkCreate.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMarkCreate_CellContentClick);
             // 
             // ColumnMarkCRUDİd
             // 
@@ -125,6 +105,28 @@
             this.ColumnMarkChecked.Name = "ColumnMarkChecked";
             this.ColumnMarkChecked.ReadOnly = true;
             // 
+            // cbCheckedGroup
+            // 
+            this.cbCheckedGroup.BackColor = System.Drawing.Color.IndianRed;
+            this.cbCheckedGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCheckedGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCheckedGroup.ForeColor = System.Drawing.Color.Blue;
+            this.cbCheckedGroup.FormattingEnabled = true;
+            this.cbCheckedGroup.Location = new System.Drawing.Point(0, 54);
+            this.cbCheckedGroup.Name = "cbCheckedGroup";
+            this.cbCheckedGroup.Size = new System.Drawing.Size(349, 33);
+            this.cbCheckedGroup.TabIndex = 29;
+            // 
+            // ChooseBtn
+            // 
+            this.ChooseBtn.Location = new System.Drawing.Point(366, 54);
+            this.ChooseBtn.Name = "ChooseBtn";
+            this.ChooseBtn.Size = new System.Drawing.Size(75, 33);
+            this.ChooseBtn.TabIndex = 30;
+            this.ChooseBtn.Text = "Choose";
+            this.ChooseBtn.UseVisualStyleBackColor = true;
+            this.ChooseBtn.Click += new System.EventHandler(this.ChooseBtn_Click);
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -149,20 +151,20 @@
             this.upper50ToolStripMenuItem,
             this.beetween50ToolStripMenuItem});
             this.filterByMarkToolStripMenuItem.Name = "filterByMarkToolStripMenuItem";
-            this.filterByMarkToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.filterByMarkToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.filterByMarkToolStripMenuItem.Text = "Filter by Mark";
             // 
             // upper50ToolStripMenuItem
             // 
             this.upper50ToolStripMenuItem.Name = "upper50ToolStripMenuItem";
-            this.upper50ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.upper50ToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.upper50ToolStripMenuItem.Text = "Upper 50";
             this.upper50ToolStripMenuItem.Click += new System.EventHandler(this.Upper50ToolStripMenuItem_Click);
             // 
             // beetween50ToolStripMenuItem
             // 
             this.beetween50ToolStripMenuItem.Name = "beetween50ToolStripMenuItem";
-            this.beetween50ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.beetween50ToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.beetween50ToolStripMenuItem.Text = "Beetween 50 and 80";
             this.beetween50ToolStripMenuItem.Click += new System.EventHandler(this.Beetween50ToolStripMenuItem_Click);
             // 

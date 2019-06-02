@@ -1,0 +1,450 @@
+USE [master]
+GO
+/****** Object:  Database [Academy]    Script Date: 6/2/2019 15:57:21 ******/
+CREATE DATABASE [Academy]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'Academy', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL13.SQLEXPRESS\MSSQL\DATA\Academy.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'Academy_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL13.SQLEXPRESS\MSSQL\DATA\Academy_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+GO
+ALTER DATABASE [Academy] SET COMPATIBILITY_LEVEL = 130
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [Academy].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [Academy] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [Academy] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [Academy] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [Academy] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [Academy] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [Academy] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [Academy] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [Academy] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [Academy] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [Academy] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [Academy] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [Academy] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [Academy] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [Academy] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [Academy] SET  DISABLE_BROKER 
+GO
+ALTER DATABASE [Academy] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [Academy] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [Academy] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [Academy] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [Academy] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [Academy] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [Academy] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [Academy] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [Academy] SET  MULTI_USER 
+GO
+ALTER DATABASE [Academy] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [Academy] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [Academy] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [Academy] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [Academy] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [Academy] SET QUERY_STORE = OFF
+GO
+USE [Academy]
+GO
+ALTER DATABASE SCOPED CONFIGURATION SET LEGACY_CARDINALITY_ESTIMATION = OFF;
+GO
+ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 0;
+GO
+ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = ON;
+GO
+ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = OFF;
+GO
+USE [Academy]
+GO
+/****** Object:  Table [dbo].[Academy]    Script Date: 6/2/2019 15:57:29 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Academy](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Street] [nvarchar](50) NOT NULL,
+	[Phone] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK__Academy__32120B660958E5DF] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Classrooms]    Script Date: 6/2/2019 15:57:30 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Classrooms](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK__Classroo__32120B66F8F90CDA] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Education_Proqrams]    Script Date: 6/2/2019 15:57:30 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Education_Proqrams](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Price] [float] NOT NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK__Educatio__32120B667330C6F0] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Employees]    Script Date: 6/2/2019 15:57:30 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Employees](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Surname] [nvarchar](50) NOT NULL,
+	[Email] [nvarchar](50) NOT NULL,
+	[Phone] [nvarchar](50) NOT NULL,
+	[PositionID] [int] NOT NULL,
+	[Start Time] [datetime] NOT NULL,
+	[Salary] [float] NOT NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK__Employee__32120B66D76E436F] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Groups]    Script Date: 6/2/2019 15:57:30 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Groups](
+	[ID] [int] IDENTITY(5,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[ClassroomID] [int] NOT NULL,
+	[TeacherID] [int] NOT NULL,
+	[MentorID] [int] NOT NULL,
+	[Capacity] [int] NOT NULL,
+	[Education_ProgramID] [int] NOT NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK_Groups] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Positions]    Script Date: 6/2/2019 15:57:30 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Positions](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK__Position__32120B66454A747B] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Students]    Script Date: 6/2/2019 15:57:30 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Students](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Surname] [nvarchar](50) NOT NULL,
+	[Email] [nvarchar](50) NOT NULL,
+	[Phone] [nvarchar](50) NOT NULL,
+	[Fee] [float] NOT NULL,
+	[GroupID] [int] NOT NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK__Students__32120B661125DF12] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Task_Marks]    Script Date: 6/2/2019 15:57:30 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Task_Marks](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[StudentID] [int] NOT NULL,
+	[TaskID] [int] NOT NULL,
+	[Mark] [int] NOT NULL,
+	[Status] [bit] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Tasks]    Script Date: 6/2/2019 15:57:30 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Tasks](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Deadline] [datetime] NOT NULL,
+	[GroupID] [int] NOT NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK__Tasks__32120B665E126202] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Teachers]    Script Date: 6/2/2019 15:57:30 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Teachers](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Surname] [nvarchar](50) NOT NULL,
+	[SpecialityID] [int] NOT NULL,
+	[Email] [nvarchar](50) NOT NULL,
+	[Phone] [nvarchar](50) NOT NULL,
+	[Status] [bit] NULL,
+ CONSTRAINT [PK__Teachers__32120B662D712B6A] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Academy] ON 
+
+INSERT [dbo].[Academy] ([Id], [Name], [Street], [Phone]) VALUES (1, N'Code Academy', N'Nicami kuc.  203B', N'(050)444-26-33')
+SET IDENTITY_INSERT [dbo].[Academy] OFF
+SET IDENTITY_INSERT [dbo].[Classrooms] ON 
+
+INSERT [dbo].[Classrooms] ([Id], [Name], [Status]) VALUES (1, N'Titan', 1)
+INSERT [dbo].[Classrooms] ([Id], [Name], [Status]) VALUES (2, N'Pluto', 1)
+INSERT [dbo].[Classrooms] ([Id], [Name], [Status]) VALUES (3, N'Mars', 1)
+INSERT [dbo].[Classrooms] ([Id], [Name], [Status]) VALUES (4, N'Neptun', 1)
+INSERT [dbo].[Classrooms] ([Id], [Name], [Status]) VALUES (5, N'Venus', 1)
+INSERT [dbo].[Classrooms] ([Id], [Name], [Status]) VALUES (7, N'gg', 0)
+SET IDENTITY_INSERT [dbo].[Classrooms] OFF
+SET IDENTITY_INSERT [dbo].[Education_Proqrams] ON 
+
+INSERT [dbo].[Education_Proqrams] ([Id], [Name], [Price], [Status]) VALUES (1, N'Proqramlasdirma', 3500, 1)
+INSERT [dbo].[Education_Proqrams] ([Id], [Name], [Price], [Status]) VALUES (3, N'Sistem Adminstratorlugu', 3200, 1)
+INSERT [dbo].[Education_Proqrams] ([Id], [Name], [Price], [Status]) VALUES (4, N'Web Designer', 3500, 1)
+INSERT [dbo].[Education_Proqrams] ([Id], [Name], [Price], [Status]) VALUES (5, N'dhdhdhhddddd', 2000, 0)
+SET IDENTITY_INSERT [dbo].[Education_Proqrams] OFF
+SET IDENTITY_INSERT [dbo].[Employees] ON 
+
+INSERT [dbo].[Employees] ([Id], [Name], [Surname], [Email], [Phone], [PositionID], [Start Time], [Salary], [Status]) VALUES (1, N'Sattar', N'Amrahov', N'Sattar@code.edu.az', N'0514669934', 1, CAST(N'2019-04-13T00:00:00.000' AS DateTime), 2000, 1)
+INSERT [dbo].[Employees] ([Id], [Name], [Surname], [Email], [Phone], [PositionID], [Start Time], [Salary], [Status]) VALUES (2, N'Orxan', N'Rzazade', N'Orxan@code.edu.az', N'0515159043', 1, CAST(N'2019-01-14T00:00:00.000' AS DateTime), 2000, 1)
+INSERT [dbo].[Employees] ([Id], [Name], [Surname], [Email], [Phone], [PositionID], [Start Time], [Salary], [Status]) VALUES (4, N'Nicat', N'Abdullayev', N'Nijat@code.edu.az', N'0517552617', 2, CAST(N'2019-01-14T00:00:00.000' AS DateTime), 100, 1)
+INSERT [dbo].[Employees] ([Id], [Name], [Surname], [Email], [Phone], [PositionID], [Start Time], [Salary], [Status]) VALUES (5, N'Xatire', N'Ceferova', N'Khatira@code.edu.az', N'0556558596', 3, CAST(N'2018-03-13T00:00:00.000' AS DateTime), 1500, 1)
+INSERT [dbo].[Employees] ([Id], [Name], [Surname], [Email], [Phone], [PositionID], [Start Time], [Salary], [Status]) VALUES (6, N'heyder', N'elekberli', N'heyder@code.edu.az', N'0558446540', 3, CAST(N'2019-05-30T00:00:00.000' AS DateTime), 2000, 0)
+INSERT [dbo].[Employees] ([Id], [Name], [Surname], [Email], [Phone], [PositionID], [Start Time], [Salary], [Status]) VALUES (7, N'dd', N'ddd', N'heyder@code.edu.azh', N'0558446565', 1, CAST(N'2019-05-30T00:00:00.000' AS DateTime), 2000, 0)
+INSERT [dbo].[Employees] ([Id], [Name], [Surname], [Email], [Phone], [PositionID], [Start Time], [Salary], [Status]) VALUES (8, N'Heyder', N'Elekberli', N'Eeyder@code.edu.az', N'0558446510', 2, CAST(N'2019-05-18T00:00:00.000' AS DateTime), 200, 1)
+INSERT [dbo].[Employees] ([Id], [Name], [Surname], [Email], [Phone], [PositionID], [Start Time], [Salary], [Status]) VALUES (9, N'Eli', N'Eliyev', N'Eli@code.edu.az', N'0558445653', 2, CAST(N'2018-12-30T00:00:00.000' AS DateTime), 150, 1)
+INSERT [dbo].[Employees] ([Id], [Name], [Surname], [Email], [Phone], [PositionID], [Start Time], [Salary], [Status]) VALUES (10, N'Mahir', N'Esgerov', N'Mahir@code.edu.az', N'0506825315', 4, CAST(N'2018-03-22T00:00:00.000' AS DateTime), 1200, 1)
+INSERT [dbo].[Employees] ([Id], [Name], [Surname], [Email], [Phone], [PositionID], [Start Time], [Salary], [Status]) VALUES (11, N'Babek', N'Abdullayev', N'Babek@gmail.com', N'0558555636', 3, CAST(N'2019-02-05T00:00:00.000' AS DateTime), 1350, 1)
+INSERT [dbo].[Employees] ([Id], [Name], [Surname], [Email], [Phone], [PositionID], [Start Time], [Salary], [Status]) VALUES (12, N'Qefer', N'Almemmedov', N'Qefer@code.edu.az', N'0556221212', 2, CAST(N'2018-11-05T00:00:00.000' AS DateTime), 170, 1)
+SET IDENTITY_INSERT [dbo].[Employees] OFF
+SET IDENTITY_INSERT [dbo].[Groups] ON 
+
+INSERT [dbo].[Groups] ([ID], [Name], [ClassroomID], [TeacherID], [MentorID], [Capacity], [Education_ProgramID], [Status]) VALUES (0, N'p215', 1, 1, 1, 18, 1, 0)
+INSERT [dbo].[Groups] ([ID], [Name], [ClassroomID], [TeacherID], [MentorID], [Capacity], [Education_ProgramID], [Status]) VALUES (1, N'P210', 1, 1, 4, 18, 1, 1)
+INSERT [dbo].[Groups] ([ID], [Name], [ClassroomID], [TeacherID], [MentorID], [Capacity], [Education_ProgramID], [Status]) VALUES (2, N'P211', 2, 2, 4, 16, 3, 1)
+INSERT [dbo].[Groups] ([ID], [Name], [ClassroomID], [TeacherID], [MentorID], [Capacity], [Education_ProgramID], [Status]) VALUES (3, N'V213', 3, 3, 4, 18, 4, 1)
+INSERT [dbo].[Groups] ([ID], [Name], [ClassroomID], [TeacherID], [MentorID], [Capacity], [Education_ProgramID], [Status]) VALUES (5, N'P210', 1, 4, 4, 16, 3, 0)
+INSERT [dbo].[Groups] ([ID], [Name], [ClassroomID], [TeacherID], [MentorID], [Capacity], [Education_ProgramID], [Status]) VALUES (6, N'P215', 4, 1, 4, 18, 1, 0)
+INSERT [dbo].[Groups] ([ID], [Name], [ClassroomID], [TeacherID], [MentorID], [Capacity], [Education_ProgramID], [Status]) VALUES (7, N'P255', 4, 4, 1, 16, 1, 1)
+INSERT [dbo].[Groups] ([ID], [Name], [ClassroomID], [TeacherID], [MentorID], [Capacity], [Education_ProgramID], [Status]) VALUES (8, N'a', 3, 6, 1, 18, 1, 0)
+INSERT [dbo].[Groups] ([ID], [Name], [ClassroomID], [TeacherID], [MentorID], [Capacity], [Education_ProgramID], [Status]) VALUES (9, N'P215', 5, 8, 6, 16, 4, 0)
+INSERT [dbo].[Groups] ([ID], [Name], [ClassroomID], [TeacherID], [MentorID], [Capacity], [Education_ProgramID], [Status]) VALUES (10, N'V313', 5, 8, 6, 18, 4, 1)
+INSERT [dbo].[Groups] ([ID], [Name], [ClassroomID], [TeacherID], [MentorID], [Capacity], [Education_ProgramID], [Status]) VALUES (11, N'P230', 5, 3, 12, 15, 1, 1)
+INSERT [dbo].[Groups] ([ID], [Name], [ClassroomID], [TeacherID], [MentorID], [Capacity], [Education_ProgramID], [Status]) VALUES (12, N'ppp', 1, 1, 4, 21, 1, 0)
+SET IDENTITY_INSERT [dbo].[Groups] OFF
+SET IDENTITY_INSERT [dbo].[Positions] ON 
+
+INSERT [dbo].[Positions] ([Id], [Name], [Status]) VALUES (1, N'Teacher', 1)
+INSERT [dbo].[Positions] ([Id], [Name], [Status]) VALUES (2, N'Mentor', 1)
+INSERT [dbo].[Positions] ([Id], [Name], [Status]) VALUES (3, N'Human Resource', 1)
+INSERT [dbo].[Positions] ([Id], [Name], [Status]) VALUES (4, N'Worker', 1)
+INSERT [dbo].[Positions] ([Id], [Name], [Status]) VALUES (5, N'Teste', 0)
+INSERT [dbo].[Positions] ([Id], [Name], [Status]) VALUES (6, N'gg', 0)
+SET IDENTITY_INSERT [dbo].[Positions] OFF
+SET IDENTITY_INSERT [dbo].[Students] ON 
+
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (1, N'Heyder', N'Elekberli', N'HeydarRa@code.edu.az', N'0558446570', 3500, 1, 1)
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (3, N'Pervin', N'Pashazade', N'Parvin@code.edu.az', N'0552790634', 3300, 1, 1)
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (4, N'Ayaz', N'Mehdiyev', N'Ayaz@code.edu.az', N'0506311322', 3000, 1, 1)
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (6, N'Cavidan', N'Eliyev', N'Cavid@code.edu.az', N'0556685523', 2600, 3, 1)
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (11, N'Murad', N'Muradov', N'Merdan@gmail.com', N'0706563614', 2800, 3, 1)
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (12, N'Terlan', N'Seferov', N'Akbar@code.edu.az', N'0559633636', 2000, 7, 1)
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (19, N'Elnur', N'Resenzade', N'Elnur@code.edu.az', N'0558559685', 2000, 2, 1)
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (22, N'Taleh', N'Eliyev', N'Eliyev@code.edu.az', N'0558556565', 2000, 3, 1)
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (35, N'Behram', N'Bagirzade', N'Behram@gmail.com', N'0556669585', 2600, 2, 1)
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (36, N'Tamerlan', N'Letifli', N'Tamerlan@code.edu.az', N'0515256535', 3000, 2, 1)
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (38, N'Nurlan', N'Eliyev', N'Nurlan@code.edu.az', N'0558525282', 2000, 3, 1)
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (79, N'Mahmud', N'Cavadov', N'mahmud@code.edu.az', N'0558446570', 2500, 7, 1)
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (81, N'Bayram', N'Adigozelov', N'Bayram@outlook.com', N'0556532562', 3500, 10, 1)
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (82, N'Arzu', N'Quliyev', N'Arzu@rambler.ru', N'0705652325', 3500, 10, 1)
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (83, N'Heyder', N'fffddd', N'Heyder@code.edu.az', N'0558555525', 2000, 3, 0)
+INSERT [dbo].[Students] ([Id], [Name], [Surname], [Email], [Phone], [Fee], [GroupID], [Status]) VALUES (84, N'fff', N'fff', N'Heyder@oulook.com', N'0558446510', 235, 10, 0)
+SET IDENTITY_INSERT [dbo].[Students] OFF
+SET IDENTITY_INSERT [dbo].[Task_Marks] ON 
+
+INSERT [dbo].[Task_Marks] ([Id], [StudentID], [TaskID], [Mark], [Status]) VALUES (1, 1, 1, 90, 1)
+INSERT [dbo].[Task_Marks] ([Id], [StudentID], [TaskID], [Mark], [Status]) VALUES (2, 3, 2, 80, 1)
+INSERT [dbo].[Task_Marks] ([Id], [StudentID], [TaskID], [Mark], [Status]) VALUES (3, 4, 3, 86, 1)
+INSERT [dbo].[Task_Marks] ([Id], [StudentID], [TaskID], [Mark], [Status]) VALUES (4, 6, 2, 70, 1)
+INSERT [dbo].[Task_Marks] ([Id], [StudentID], [TaskID], [Mark], [Status]) VALUES (5, 35, 3, 99, 0)
+INSERT [dbo].[Task_Marks] ([Id], [StudentID], [TaskID], [Mark], [Status]) VALUES (6, 11, 4, 60, 1)
+INSERT [dbo].[Task_Marks] ([Id], [StudentID], [TaskID], [Mark], [Status]) VALUES (7, 1, 2, 56, 1)
+INSERT [dbo].[Task_Marks] ([Id], [StudentID], [TaskID], [Mark], [Status]) VALUES (8, 79, 1, 45, 1)
+INSERT [dbo].[Task_Marks] ([Id], [StudentID], [TaskID], [Mark], [Status]) VALUES (9, 6, 3, 67, 1)
+INSERT [dbo].[Task_Marks] ([Id], [StudentID], [TaskID], [Mark], [Status]) VALUES (10, 22, 2, 66, 1)
+INSERT [dbo].[Task_Marks] ([Id], [StudentID], [TaskID], [Mark], [Status]) VALUES (11, 1, 4, 85, 1)
+INSERT [dbo].[Task_Marks] ([Id], [StudentID], [TaskID], [Mark], [Status]) VALUES (12, 1, 6, 76, 1)
+SET IDENTITY_INSERT [dbo].[Task_Marks] OFF
+SET IDENTITY_INSERT [dbo].[Tasks] ON 
+
+INSERT [dbo].[Tasks] ([Id], [Name], [Deadline], [GroupID], [Status]) VALUES (1, N'Frontend Task', CAST(N'2019-03-13T00:00:00.000' AS DateTime), 2, 1)
+INSERT [dbo].[Tasks] ([Id], [Name], [Deadline], [GroupID], [Status]) VALUES (2, N'C# Task', CAST(N'2019-05-02T00:00:00.000' AS DateTime), 1, 1)
+INSERT [dbo].[Tasks] ([Id], [Name], [Deadline], [GroupID], [Status]) VALUES (3, N'Backend Task', CAST(N'2019-06-19T00:00:00.000' AS DateTime), 3, 1)
+INSERT [dbo].[Tasks] ([Id], [Name], [Deadline], [GroupID], [Status]) VALUES (4, N'JavaScript Task', CAST(N'2019-02-03T00:00:00.000' AS DateTime), 3, 1)
+INSERT [dbo].[Tasks] ([Id], [Name], [Deadline], [GroupID], [Status]) VALUES (5, N'dhfhfhf', CAST(N'2019-05-13T11:34:52.000' AS DateTime), 2, 0)
+INSERT [dbo].[Tasks] ([Id], [Name], [Deadline], [GroupID], [Status]) VALUES (6, N'.Net Task', CAST(N'2019-05-05T22:54:52.000' AS DateTime), 10, 1)
+INSERT [dbo].[Tasks] ([Id], [Name], [Deadline], [GroupID], [Status]) VALUES (7, N'SQL Task', CAST(N'2019-06-02T00:17:27.620' AS DateTime), 7, 1)
+SET IDENTITY_INSERT [dbo].[Tasks] OFF
+SET IDENTITY_INSERT [dbo].[Teachers] ON 
+
+INSERT [dbo].[Teachers] ([Id], [Name], [Surname], [SpecialityID], [Email], [Phone], [Status]) VALUES (1, N'Sattar', N'Amrahov', 1, N'Sattar@code.edu.az', N'0514669934', 1)
+INSERT [dbo].[Teachers] ([Id], [Name], [Surname], [SpecialityID], [Email], [Phone], [Status]) VALUES (2, N'Samir ', N'Dadashzade', 3, N'Samir@code.edu.az', N'0555324532', 1)
+INSERT [dbo].[Teachers] ([Id], [Name], [Surname], [SpecialityID], [Email], [Phone], [Status]) VALUES (3, N'Knyaz', N'Yaqubov', 4, N'Knyaz@code.edu.az', N'0706905886', 1)
+INSERT [dbo].[Teachers] ([Id], [Name], [Surname], [SpecialityID], [Email], [Phone], [Status]) VALUES (4, N'Eli', N'Hesimov', 3, N'Cavad@code.edu.az', N'0558446570', 1)
+INSERT [dbo].[Teachers] ([Id], [Name], [Surname], [SpecialityID], [Email], [Phone], [Status]) VALUES (5, N'heyder', N'Elekberli', 1, N'heyder@gmail.com', N'0558446570', 0)
+INSERT [dbo].[Teachers] ([Id], [Name], [Surname], [SpecialityID], [Email], [Phone], [Status]) VALUES (6, N'heyderr', N'elekberli', 1, N'heyde@code.edu.az', N'0558555555', 0)
+INSERT [dbo].[Teachers] ([Id], [Name], [Surname], [SpecialityID], [Email], [Phone], [Status]) VALUES (7, N'dddd', N'dddd', 5, N'Heyder@code.edu.az', N'0558446510', 0)
+INSERT [dbo].[Teachers] ([Id], [Name], [Surname], [SpecialityID], [Email], [Phone], [Status]) VALUES (8, N'Orxan', N'Rzazade', 1, N'Orxan@code.edu.az', N'0556325632', 1)
+SET IDENTITY_INSERT [dbo].[Teachers] OFF
+ALTER TABLE [dbo].[Classrooms] ADD  CONSTRAINT [DF__Classroom__Statu__2F10007B]  DEFAULT ('1') FOR [Status]
+GO
+ALTER TABLE [dbo].[Education_Proqrams] ADD  CONSTRAINT [DF_Education_Proqrams_Status]  DEFAULT ((1)) FOR [Status]
+GO
+ALTER TABLE [dbo].[Employees] ADD  CONSTRAINT [DF__Employees__Statu__29572725]  DEFAULT ('1') FOR [Status]
+GO
+ALTER TABLE [dbo].[Groups] ADD  CONSTRAINT [DF__Groups__Status__2C3393D0]  DEFAULT ('1') FOR [Status]
+GO
+ALTER TABLE [dbo].[Positions] ADD  CONSTRAINT [DF__Positions__Statu__33D4B598]  DEFAULT ('1') FOR [Status]
+GO
+ALTER TABLE [dbo].[Students] ADD  CONSTRAINT [DF__Students__Status__267ABA7A]  DEFAULT ((1)) FOR [Status]
+GO
+ALTER TABLE [dbo].[Task_Marks] ADD  CONSTRAINT [DF_Task_Marks_Status]  DEFAULT ((1)) FOR [Status]
+GO
+ALTER TABLE [dbo].[Tasks] ADD  CONSTRAINT [DF__Tasks__Status__36B12243]  DEFAULT ('1') FOR [Status]
+GO
+ALTER TABLE [dbo].[Teachers] ADD  CONSTRAINT [DF__Teachers__Status__239E4DCF]  DEFAULT ('1') FOR [Status]
+GO
+ALTER TABLE [dbo].[Employees]  WITH CHECK ADD  CONSTRAINT [FK_Employees_Positions] FOREIGN KEY([PositionID])
+REFERENCES [dbo].[Positions] ([Id])
+GO
+ALTER TABLE [dbo].[Employees] CHECK CONSTRAINT [FK_Employees_Positions]
+GO
+ALTER TABLE [dbo].[Groups]  WITH CHECK ADD  CONSTRAINT [FK_Groups_Classrooms] FOREIGN KEY([ClassroomID])
+REFERENCES [dbo].[Classrooms] ([Id])
+GO
+ALTER TABLE [dbo].[Groups] CHECK CONSTRAINT [FK_Groups_Classrooms]
+GO
+ALTER TABLE [dbo].[Groups]  WITH CHECK ADD  CONSTRAINT [FK_Groups_Education_Proqrams] FOREIGN KEY([Education_ProgramID])
+REFERENCES [dbo].[Education_Proqrams] ([Id])
+GO
+ALTER TABLE [dbo].[Groups] CHECK CONSTRAINT [FK_Groups_Education_Proqrams]
+GO
+ALTER TABLE [dbo].[Groups]  WITH CHECK ADD  CONSTRAINT [FK_Groups_Employees] FOREIGN KEY([MentorID])
+REFERENCES [dbo].[Employees] ([Id])
+GO
+ALTER TABLE [dbo].[Groups] CHECK CONSTRAINT [FK_Groups_Employees]
+GO
+ALTER TABLE [dbo].[Groups]  WITH CHECK ADD  CONSTRAINT [FK_Groups_Teachers] FOREIGN KEY([TeacherID])
+REFERENCES [dbo].[Teachers] ([Id])
+GO
+ALTER TABLE [dbo].[Groups] CHECK CONSTRAINT [FK_Groups_Teachers]
+GO
+ALTER TABLE [dbo].[Students]  WITH CHECK ADD  CONSTRAINT [FK_Students_Groups] FOREIGN KEY([GroupID])
+REFERENCES [dbo].[Groups] ([ID])
+GO
+ALTER TABLE [dbo].[Students] CHECK CONSTRAINT [FK_Students_Groups]
+GO
+ALTER TABLE [dbo].[Task_Marks]  WITH CHECK ADD  CONSTRAINT [FK_Task_Marks_Students] FOREIGN KEY([StudentID])
+REFERENCES [dbo].[Students] ([Id])
+GO
+ALTER TABLE [dbo].[Task_Marks] CHECK CONSTRAINT [FK_Task_Marks_Students]
+GO
+ALTER TABLE [dbo].[Task_Marks]  WITH CHECK ADD  CONSTRAINT [FK_Task_Marks_Tasks] FOREIGN KEY([TaskID])
+REFERENCES [dbo].[Tasks] ([Id])
+GO
+ALTER TABLE [dbo].[Task_Marks] CHECK CONSTRAINT [FK_Task_Marks_Tasks]
+GO
+ALTER TABLE [dbo].[Tasks]  WITH CHECK ADD  CONSTRAINT [FK_Tasks_Groups] FOREIGN KEY([GroupID])
+REFERENCES [dbo].[Groups] ([ID])
+GO
+ALTER TABLE [dbo].[Tasks] CHECK CONSTRAINT [FK_Tasks_Groups]
+GO
+ALTER TABLE [dbo].[Teachers]  WITH CHECK ADD  CONSTRAINT [FK_Teachers_Education_Proqrams1] FOREIGN KEY([SpecialityID])
+REFERENCES [dbo].[Education_Proqrams] ([Id])
+GO
+ALTER TABLE [dbo].[Teachers] CHECK CONSTRAINT [FK_Teachers_Education_Proqrams1]
+GO
+USE [master]
+GO
+ALTER DATABASE [Academy] SET  READ_WRITE 
+GO
